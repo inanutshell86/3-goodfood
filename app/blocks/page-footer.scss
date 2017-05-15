@@ -1,4 +1,5 @@
 .page-footer {
+  border-top: 3px solid #566e87;
   background-color: #889cb0;
 
    &__wrapper {
@@ -8,6 +9,9 @@
    &__nav {
      display: table;
      width: 100%;
+     padding-top: 23px;
+     padding-bottom: 14px;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
    }
 
    &__about,
@@ -32,6 +36,30 @@
      color: #e4f1ff;
      font-size: 12px;
      line-height: 25px;
+
+     &:hover {
+       text-decoration: underline;
+     }
+   }
+
+   &__copyright {
+     padding-top: 17px;
+     padding-bottom: 13px;
+   }
+
+   &__text,
+   &__email {
+     margin: 0;
+     @include font;
+      opacity: 0.8;
+      color: #e3f1ff;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+   }
+
+   &__email:hover {
+     text-decoration: underline;
    }
 
 }
