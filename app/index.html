@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Good Food</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="bower/bxslider-4/dist/jquery.bxslider.css">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media
   queries -->
@@ -17,10 +19,192 @@
 </head>
 <body>
   <div class="wrapper">
-    
+    <div class="main-content">
+
+      <header class="page-header">
+        <h1 class="visually-hidden">Good Food is the best food for the best people</h1>
+
+        <div class="top-panel">
+
+          <div class="lang-switcher">
+            <ul class="lang-switcher__list">
+              <li class="lang-switcher__item">
+                <a class="lang-switcher__link" href="#">In English</a>
+              </li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <div class="contacts">
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <a class="contacts__phone" href="tel:+78125556666">Связаться с нами</a>
+                </li>
+              </ul>
+            </div>
+            <div class="search">
+              <form class="search__form">
+                <input class="search__field" type="text" name="query" placeholder="Поиск">
+                <button class="search__button" type="submit">Найти</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-panel">
+
+          <div class="logo">
+            <a class="logo__link" href="#">
+              <img class="logo__pic" src="/img/logo.png" alt="Good Food logotype">
+            </a>
+          </div>
+
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="#">О компании</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">Продукция</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">Производственным <br>предприятиям</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">Дистрибьюторам <br>и розничным партнерам</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">Карьера</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">Пресс-центр</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="slider">
+
+          <ul class="slider__list">
+            <li class="slider__item">
+              <img class="slider__pic" src="img/slider-1.jpg" alt="Good Food special picture">
+              <div class="slider__info">
+                <p class="slider__slogan">Для самыx взыскательных</p>
+                <p class="slider__text">Мы создали линию GOOD FOOD Special для <br>людей, которые понимают толк в еде</p>
+                <div class="slider__link">
+                  <a class="slider__to-about" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+            <li class="slider__item">
+              <img class="slider__pic" src="http://lorempixel.com/950/369/food" alt="Good Food special picture">
+              <div class="slider__info">
+                <p class="slider__slogan">Для самыx взыскательных</p>
+                <p class="slider__text">Мы создали линию GOOD FOOD Special для <br>людей, которые понимают толк в еде</p>
+                <div class="slider__link">
+                  <a class="slider__to-about" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+            <li class="slider__item">
+              <img class="slider__pic" src="http://lorempixel.com/950/369/sports" alt="Good Food special picture">
+              <div class="slider__info">
+                <p class="slider__slogan">Для самыx взыскательных</p>
+                <p class="slider__text">Мы создали линию GOOD FOOD Special для <br>людей, которые понимают толк в еде</p>
+                <div class="slider__link">
+                  <a class="slider__to-about" href="#">Подробнее</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- <div class="slider__controls">
+            <button class="slider__next" id="next" href="#">Следующий</button>
+            <button class="slider__prev" id="previous" href="#">Предыдущий</button>
+            <a class="slider__to-about" href="#">Подробнее</a>
+          </div> -->
+        </div>
+      </header>
+
+      <section class="info">
+        <h2 class="info__title  visually-hidden">Информация о нас</h2>
+        <ul class="info__list">
+          <li class="info__item">
+            <h3 class="info__item-title">Любимым</h3>
+            <p class="info__item-text">Покупателям</p>
+          </li>
+          <li class="info__item">
+            <h3 class="info__item-title">Уважаемым</h3>
+            <p class="info__item-text">Дистрибьюторам и розничным партнерам</p>
+          </li>
+          <li class="info__item">
+            <h3 class="info__item-title">Дорогим</h3>
+            <p class="info__item-text">Производственным предприятиям</p>
+          </li>
+        </ul>
+      </section>
+    </div>
   </div>
   <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__nav">
+        <div class="page-footer__about">
+          <h2 class="page-footer__title">О компании</h2>
+          <ul class="page-footer__list">
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Миссия</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">История</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Качество</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Сертификаты</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__production">
+          <h2 class="page-footer__title">Продукция</h2>
+          <ul class="page-footer__list">
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Орехи</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Кондитерка</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Импортная</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Другие</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Купить</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__manufacturer">
+          <h2 class="page-footer__title">Производственным предприятиям</h2>
+          <ul class="page-footer__list">
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Услуги</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Ассортимент</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Производство</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">География</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__distributor">
+          <h2 class="page-footer__title">Дистрибьюторам и розничным партнерам</h2>
+          <ul class="page-footer__list">
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Ассортимент</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Политика</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">СТМ</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Оборудование</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__career">
+          <h2 class="page-footer__title">Карьера</h2>
+          <ul class="page-footer__list">
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Вакансии</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Корп. культура</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Обучение</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__press">
+          <h2 class="page-footer__title">Пресс-центр</h2>
+          <ul class="page-footer__list">
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Новости</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Акции</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Фотогалерея</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__contacts">
+          <h2 class="page-footer__title">Контакты</h2>
+        </div>
+      </div>
+      <div class="page-footer__copyright">
+        <p class="page-footer__text">
+          © 2014, Москва, Группа компаний «ГУД-ФУД» <a class="page-footer__email" href="mailto:nuts@good-food.ru">nuts@good-food.ru</a>
+        </p>
+      </div>
+    </div>
   </footer>
-  <script src="js/main.js"></script>
+
+  <script src="bower/jquery/dist/jquery.min.js"></script>
+  <script src="bower/bxslider-4/dist/jquery.bxslider.min.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
