@@ -1,0 +1,37 @@
+.page-footer {
+  background-color: #889cb0;
+
+   &__wrapper {
+     @include container-fixed;
+   }
+
+   &__nav {
+     display: table;
+     width: 100%;
+   }
+
+   &__about,
+   &__production,
+   &__manufacturer,
+   &__distributor,
+   &__career,
+   &__press,
+   &__contacts {
+     display: table-cell;
+   }
+
+   &__title {
+      @include font(medium);
+      color: white;
+      font-size: 14px;
+      line-height: 20px;
+   }
+
+   &__link {
+     @include font(light);
+     color: #e4f1ff;
+     font-size: 12px;
+     line-height: 25px;
+   }
+
+}
