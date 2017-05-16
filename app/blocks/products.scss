@@ -1,0 +1,43 @@
+.products {
+  margin-top: 18px;
+  padding-top: 4px;
+  padding-left: 110px;
+  padding-right: 84px;
+  box-shadow: 0 0 10px rgba(0, 16, 16, 0.17);
+  background-color: #fff;
+
+  &__list {
+    display: table;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__item {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__item:before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 0;
+    border: 1px dashed #e9eaea;
+  }
+
+  &__item:first-child {
+    text-align: left;
+    border: none;
+  }
+
+  &__item:last-child {
+    text-align: right;
+  }
+
+  &__link {
+    display: block;
+  }
+
+}
