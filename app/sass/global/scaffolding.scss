@@ -29,6 +29,7 @@ body {
   height: auto !important;
   @include container-fixed;
   overflow: hidden;
+  padding: 0 5px;
 }
 .wrapper:after {
   content: "";
