@@ -1,0 +1,137 @@
+.news {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding-top: 1px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 16, 16, 0.17);
+
+  &__title {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 18px;
+    margin-bottom: 34px;
+    @include font(bold);
+    color: #1e1e1e;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__title:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 47%;
+    right: 47%;
+    border: 1px solid #8cbf27;
+  }
+
+  &__list {
+    display: table;
+    width: 100%;
+  }
+
+  &__item {
+    display: table-cell;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding-left: 100px;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+  }
+
+  &__link p {
+    margin: 0px;
+    @include font;
+    color: #1d1d1d;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__pic {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    display: block;
+    width: 75px;
+    height: 75px;
+  }
+
+  &__date {
+    @include font(italic);
+    color: #636363;
+    font-size: 12px;
+    line-height: 30px;
+  }
+
+  &__socials-list {
+    margin-top: 23px;
+    border-top: 1px solid #eeedef;
+    text-align: justify;
+  }
+
+  &__socials-list:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0;
+  }
+
+  &__socials-item {
+    position: relative;
+    display: inline-block;
+    padding-top: 14px;
+    padding-right: 80px;
+  }
+
+  &__socials-item--GF {
+    padding-left: 62px;
+    background: url("../img/GF-social.png") no-repeat 10px 26px;
+  }
+
+  &__socials-item--NB {
+    padding-left: 125px;
+    background: url("../img/nutberry-social.png") no-repeat 10px 26px;
+  }
+
+  &__socials-text {
+    @include font;
+    color: #252525;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__socials-link {
+    position: absolute;
+    text-indent: -9999px;
+    display: inline-block;
+    width: 25px;
+    height: 24px;
+    border-radius: 1px;
+    transition: transform 0.2s ease-out;
+  }
+
+  &__socials-link--vk {
+    top: 30px;
+    right: 35px;
+    background: url("../img/spritesheet.png") no-repeat -5px -168px;
+  }
+
+  &__socials-link--fb {
+    top: 30px;
+    right: 0px;
+    background: url("../img/spritesheet.png") no-repeat -5px -5px;
+  }
+
+  &__socials-link:hover {
+    transform: translate(0px, -5px);
+  }
+}
