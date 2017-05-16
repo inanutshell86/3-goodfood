@@ -3,6 +3,7 @@
   background-color: #889cb0;
 
    &__wrapper {
+     padding: 0 5px;
      @include container-fixed;
    }
 
