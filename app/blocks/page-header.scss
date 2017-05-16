@@ -158,6 +158,11 @@
                 url("../img/slider-promo.png") no-repeat 93px 93px;
   }
 
+  .slider__pic {
+    max-width: 950px;
+    max-height: 369px;
+  }
+
   .slider__slogan {
     margin: 0;
     margin-bottom: 18px;
@@ -192,8 +197,6 @@
     font-size: 13px;
     color: #fff;
   }
-
-
 
   // bxSlider
   .bx-wrapper {
