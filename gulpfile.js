@@ -93,6 +93,6 @@ gulp.task("clean", function() {
 });
 
 // Build
-gulp.task("build", function() {
+gulp.task("build", function(fn) {
   run("clean", "copy", "style-dist", "serve-dist", fn);
 });
