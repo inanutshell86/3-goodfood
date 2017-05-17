@@ -57,7 +57,7 @@ gulp.task("copy", function() {
     "app/fonts/**/*.{woff,woff2}",
     "app/img/**",
     "app/js/**",
-    "app/bower",
+    "app/bower/**",
     "app/*.html"
   ], {
     base: "./app"
