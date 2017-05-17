@@ -27,7 +27,7 @@ body {
   position: relative;
   min-height: 100%;
   height: auto !important;
-  @include container-fixed;
+  @include container-fluid;
   overflow: hidden;
   padding: 0 5px;
 }
