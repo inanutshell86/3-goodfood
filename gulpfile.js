@@ -54,9 +54,9 @@ gulp.task("default", ["serve"]);
 // Copy
 gulp.task("copy", function() {
   return gulp.src([
-    "fonts/**/*.{woff,woff2}",
-    "img/**",
-    "js/**",
+    "app/fonts/**/*.{woff,woff2}",
+    "app/img/**",
+    "app/js/**",
     "*.html"
   ], {
     base: "."
@@ -66,7 +66,7 @@ gulp.task("copy", function() {
 
 // Production compile scss
 gulp.task("style-dist", function() {
-  gulp.src("sass/style.scss")
+  gulp.src("app/sass/style.scss")
     .pipe(sass())
     .pipe(postcss([
       autoprefixer({
@@ -82,9 +82,6 @@ gulp.task("serve-dist", function() {
   browserSync.init(null, {
     server: "dist"
   });
-
-  gulp.watch("sass/**/*.scss", ["style-dist"]);
-  gulp.watch("*.html").on("change", browserSync.reload);
 });
 
 // Clean dist folder
