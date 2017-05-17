@@ -57,9 +57,10 @@ gulp.task("copy", function() {
     "app/fonts/**/*.{woff,woff2}",
     "app/img/**",
     "app/js/**",
-    "*.html"
+    "app/bower",
+    "app/*.html"
   ], {
-    base: "."
+    base: "./app"
   })
   .pipe(gulp.dest("dist"));
 });
