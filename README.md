@@ -19,5 +19,5 @@ bower i
 
 ### Запусти проект
 ```
-start
+gulp build
 ```
