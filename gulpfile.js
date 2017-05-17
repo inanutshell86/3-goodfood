@@ -6,6 +6,8 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var sourcemaps = require("gulp-sourcemaps");
 var browserSync = require("browser-sync").create();
+var del = require("del");
+var run = require("run-sequence");
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task("style", function(err) {
@@ -48,3 +50,49 @@ gulp.task("serve", ["style"], function() {
 
 // Default: turn the server on and refresh/inject on change!
 gulp.task("default", ["serve"]);
+
+// Copy
+gulp.task("copy", function() {
+  return gulp.src([
+    "fonts/**/*.{woff,woff2}",
+    "img/**",
+    "js/**",
+    "*.html"
+  ], {
+    base: "."
+  })
+  .pipe(gulp.dest("dist"));
+});
+
+// Production compile scss
+gulp.task("style-dist", function() {
+  gulp.src("sass/style.scss")
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer({
+        browsers: ["last 2 versions", "> 2%"],
+        cascade: false
+      })
+    ]))
+    .pipe(gulp.dest("dist/css"));
+});
+
+// Production Server
+gulp.task("serve-dist", function() {
+  browserSync.init(null, {
+    server: "dist"
+  });
+
+  gulp.watch("sass/**/*.scss", ["style-dist"]);
+  gulp.watch("*.html").on("change", browserSync.reload);
+});
+
+// Clean dist folder
+gulp.task("clean", function() {
+  return del("dist");
+});
+
+// Build
+gulp.task("build", function() {
+  run("clean", "copy", "style-dist", "serve-dist", fn);
+});
