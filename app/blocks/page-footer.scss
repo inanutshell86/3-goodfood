@@ -4,7 +4,7 @@
 
    &__wrapper {
      padding: 0 5px;
-     @include container-fixed;
+     @include container-fluid;
    }
 
    &__nav {
