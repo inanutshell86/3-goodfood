@@ -10,6 +10,13 @@
     width: 31.944444444467%;
     margin-left: 2.083333333%;
     background-color: #fff;
+
+    @include media(640px) {
+      float: none;
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
   }
 
   &__item:nth-child(4n) {
@@ -18,18 +25,18 @@
 
   &__item:nth-child(1) {
     margin-left: 0;
-    background: url("../img/icon-customer.png") no-repeat 100px 16px,
-                url("../img/customer-bg.png") no-repeat;
+    background: url("../img/icon-customer.png") no-repeat center 16px,
+                url("../img/customer-bg.png") center;
   }
 
   &__item:nth-child(2) {
-    background: url("../img/icon-distributor.png") no-repeat 100px 16px,
-                url("../img/distributor-bg.png") no-repeat;
+    background: url("../img/icon-distributor.png") no-repeat center 16px,
+                url("../img/distributor-bg.png") center;
   }
 
   &__item:nth-child(3) {
-    background: url("../img/icon-manufacturer.png") no-repeat 100px 16px,
-                url("../img/manufacturer-bg.png") no-repeat;
+    background: url("../img/icon-manufacturer.png") no-repeat center 16px,
+                url("../img/manufacturer-bg.png") center;
   }
 
   &__link {
@@ -53,6 +60,10 @@
     color: #b53042;
     font-size: 25px;
     font-style: italic;
+
+    @include media(832px) {
+      font-size: 20px;
+    }
   }
 
   &__item-text {
@@ -64,5 +75,9 @@
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
+
+    @include media(832px) {
+      font-size: 12px;
+    }
   }
 }
