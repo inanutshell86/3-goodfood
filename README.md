@@ -1,7 +1,23 @@
-> Как собрать мой проект
+## Старт проекта
 
-1. git clone __git.url__site
-2. cd site
-3. bower i
-4. npm i
-5. gulp
+### Склонируй репозиторий и перейди в папку проекта
+```
+git clone git@github.com:inanutshell86/3-goodfood.git new-project && cd new-project
+```
+
+### Установи модули
+
+```
+npm i
+```
+
+и 
+
+```
+bower i
+```
+
+### Запусти проект
+```
+gulp build
+```
