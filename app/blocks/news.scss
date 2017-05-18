@@ -32,16 +32,31 @@
   &__list {
     display: table;
     width: 100%;
+
+    @include media(670px) {
+      display: block;
+      width: auto;
+    }
   }
 
   &__item {
     display: table-cell;
+
+    @include media(670px) {
+      display: list-item;
+      margin-bottom: 10px;
+    }
   }
 
   &__link {
     position: relative;
     display: block;
     padding-left: 100px;
+
+    @include media(670px) {
+      @include clearfix(false);
+      padding-left: 0;
+    }
   }
 
   &__link:hover {
@@ -54,6 +69,10 @@
     color: #1d1d1d;
     font-size: 14px;
     line-height: 18px;
+
+    @include media(670px) {
+      padding-left: 85px;
+    }
   }
 
   &__pic {
@@ -63,6 +82,11 @@
     display: block;
     width: 75px;
     height: 75px;
+
+    @include media(670px) {
+      position: static;
+      float: left;
+    }
   }
 
   &__date {
@@ -70,6 +94,10 @@
     color: #636363;
     font-size: 12px;
     line-height: 30px;
+
+    @include media(670px) {
+      padding-left: 10px;
+    }
   }
 
   &__socials-list {
@@ -90,16 +118,30 @@
     display: inline-block;
     padding-top: 14px;
     padding-right: 80px;
+
+    @include media(798px) {
+      display: block;
+    }
   }
 
   &__socials-item--GF {
     padding-left: 62px;
     background: url("../img/GF-social.png") no-repeat 10px 26px;
+
+    @include media(405px) {
+      padding: 0;
+      background: none;
+    }
   }
 
   &__socials-item--NB {
     padding-left: 125px;
     background: url("../img/nutberry-social.png") no-repeat 10px 26px;
+
+    @include media(405px) {
+      padding: 0;
+      background: none;
+    }
   }
 
   &__socials-text {
@@ -107,6 +149,7 @@
     color: #252525;
     font-size: 12px;
     line-height: 14px;
+    text-align: left;
   }
 
   &__socials-link {
@@ -123,12 +166,21 @@
     top: 30px;
     right: 35px;
     background: url("../img/spritesheet.png") no-repeat -5px -168px;
+
+    @include media(405px) {
+      top: 0px;
+      right: 28px;
+    }
   }
 
   &__socials-link--fb {
     top: 30px;
     right: 0px;
     background: url("../img/spritesheet.png") no-repeat -5px -5px;
+
+    @include media(405px) {
+      top: 0px;
+    }
   }
 
   &__socials-link:hover {

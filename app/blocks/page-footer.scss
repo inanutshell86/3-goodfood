@@ -4,7 +4,7 @@
 
    &__wrapper {
      padding: 0 5px;
-     @include container-fixed;
+     @include container-fluid;
    }
 
    &__nav {
@@ -13,6 +13,11 @@
      padding-top: 23px;
      padding-bottom: 14px;
      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+     @include media(810px) {
+       display: block;
+       font-size: 0;
+     }
    }
 
    &__about,
@@ -23,6 +28,20 @@
    &__press,
    &__contacts {
      display: table-cell;
+
+     @include media(810px) {
+       display: inline-block;
+       width: 25%;
+       vertical-align: top;
+     }
+
+     @include media(650px) {
+       width: 33.33333333%;
+     }
+
+     @include media(420px) {
+       width: 50%;
+     }
    }
 
    &__title {
