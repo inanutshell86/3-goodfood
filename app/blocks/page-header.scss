@@ -13,6 +13,13 @@
   .lang-switcher {
     float: left;
     padding-left: 21px;
+
+    @include media(478px) {
+      float: none;
+      margin-bottom: 10px;
+      padding-left: 0;
+      text-align: center;
+    }
   }
 
   .lang-switcher__item,
@@ -36,11 +43,22 @@
 
   .info-box {
     float: right;
+
+    @include media(478px) {
+      float: none;
+      text-align: center;
+    }
   }
 
   .contacts,
   .search {
     display: inline-block;
+  }
+
+  .contacts {
+    @include media(478px) {
+      margin-bottom: 10px;
+    }
   }
 
   .contacts__item {
@@ -98,6 +116,7 @@
   }
 
   .bottom-panel {
+    position: relative;
     @include clearfix;
   }
 
@@ -106,6 +125,22 @@
     width: 12%;
     padding-left: 24px;
     padding-top: 17px;
+
+    @include media(998px) {
+      width: 100%;
+      text-align: center;
+      padding-left: 0;
+    }
+
+    @include media(760px) {
+      width: auto;
+      text-align: left;
+      padding-left: 24px;
+    }
+  }
+
+  .logo__link {
+    display: block;
   }
 
   .logo__pic {
@@ -118,16 +153,43 @@
     width: 88%;
     padding-top: 20px;
     padding-left: 5px;
+
+    @include media(998px) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    @include media(760px) {
+      position: absolute;
+      z-index: 10000;
+      width: 200px;
+      background-color: #fff;
+      transform: translate(-700px, 0);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .main-nav--open {
+    transform: translate(0, 0);
   }
 
   .main-nav__list {
     display: table;
     width: 100%;
+
+    @include media(760px) {
+      display: block;
+    }
   }
 
   .main-nav__item {
     display: table-cell;
     padding: 0 10px;
+
+    @include media(760px) {
+      display: list-item;
+      border-bottom: 1px solid #e0e0e0;
+    }
   }
 
   .main-nav__link {
@@ -141,6 +203,24 @@
     letter-spacing: 1.1px;
   }
 
+  .hamburger {
+    display: none;
+
+    @include media(760px) {
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      padding: 20px;
+    }
+  }
+
+  .hamburger svg {
+    @include media(760px) {
+      width: 32px;
+      fill: #e0e0e0;
+    }
+  }
+
   .slider {
     position: relative;
     margin-top: 13px;
@@ -149,19 +229,18 @@
 
   .slider__info {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 74px;
     width: 350px;
     padding-top: 140px;
     text-align: center;
     background: url("../img/slider-pic.png") no-repeat 140px 26px,
                 url("../img/slider-promo.png") no-repeat 93px 93px;
-  }
 
-  // .slider__pic {
-  //   max-width: 950px;
-  //   max-height: 369px;
-  // }
+    @include media(1030px) {
+      background: none;
+    }
+  }
 
   .slider__slogan {
     margin: 0;
@@ -171,6 +250,9 @@
     color: #171519;
     font-size: 50px;
     line-height: 50px;
+    @include media(685px) {
+      display: none;
+    }
   }
 
   .slider__text {
@@ -180,6 +262,9 @@
     color: #2a445e;
     font-size: 14px;
     line-height: 20px;
+    @include media(685px) {
+      display: none;
+    }
   }
 
   .slider__link {
@@ -188,6 +273,9 @@
     margin: 0 auto;
     padding-top: 21px;
     background: url("../img/slider-rectangle.png") no-repeat;
+    @include media(685px) {
+      display: none;
+    }
   }
 
   .slider__to-about {

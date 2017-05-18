@@ -6,16 +6,31 @@
   box-shadow: 0 0 10px rgba(0, 16, 16, 0.17);
   background-color: #fff;
 
+  @include media(840px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   &__list {
     display: table;
     width: 100%;
     text-align: center;
+
+    @include media(640px) {
+      display: block;
+      width: auto;
+    }
   }
 
   &__item {
     position: relative;
     display: table-cell;
     vertical-align: middle;
+
+    @include media(640px) {
+      display: list-item;
+      margin-bottom: 10px;
+    }
   }
 
   &__item:before {
@@ -25,6 +40,10 @@
     bottom: 25%;
     left: 0;
     border: 1px dashed #e9eaea;
+
+    @include media(640px) {
+      display: none;
+    }
   }
 
   &__item:first-child:before {
@@ -33,10 +52,18 @@
 
   &__item:nth-child(1) {
     text-align: left;
+
+    @include media(640px) {
+      text-align: center;
+    }
   }
 
   &__item:last-child {
     text-align: right;
+
+    @include media(640px) {
+      text-align: center;
+    }
   }
 
   &__link {
