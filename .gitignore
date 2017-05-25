@@ -1,3 +1,4 @@
 node_modules
+dist
 app/css/style.css
 app/bower
