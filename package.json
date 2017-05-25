@@ -6,7 +6,7 @@
   "author": "Ihor Khrystiuk",
   "repository": {
     "type": "git",
-    "url": "https://github.com/inanutshell86/3-goodfood.git"
+    "url": "https://github.com/inanutshell86/3-goodfood"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
